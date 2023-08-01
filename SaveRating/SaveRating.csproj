@@ -63,4 +63,11 @@
       <ProjectReference Include="..\DTOs\DTOs.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="DTOs\bin\Debug\net7.0\DTOs.deps.json" />
+      <_ContentIncludedByDefault Remove="DTOs\obj\DTOs.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="DTOs\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="DTOs\obj\project.packagespec.json" />
+    </ItemGroup>
+
 </Project>

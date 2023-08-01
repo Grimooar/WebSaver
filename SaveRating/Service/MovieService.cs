@@ -1,5 +1,6 @@
 using System.Text.Json;
 using AutoMapper;
+using DTOs;
 using Kirel.DTO;
 using Kirel.Repositories.Infrastructure.Generics;
 using Kirel.Repositories.Interfaces;
