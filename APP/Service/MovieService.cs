@@ -35,6 +35,7 @@ public class MovieService
                 MovieDto dto = new MovieDto
                 {
                     Id = movie.Id,
+                    Year = movie.Year,
                     Title = movie.Title,
                     Rating = movie.Rating,
                     Description = movie.Description,
