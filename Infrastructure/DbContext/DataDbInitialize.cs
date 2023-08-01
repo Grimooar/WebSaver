@@ -1,3 +1,5 @@
+using Microsoft.Extensions.DependencyInjection;
+
 namespace WebApplication1.DbContext;
 
 public class DataDbInitializer

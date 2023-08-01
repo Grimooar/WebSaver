@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Models;
-using WebApplication1.Service;
 
 namespace WebApplication1.DbContext;
 
