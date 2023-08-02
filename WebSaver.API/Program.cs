@@ -1,5 +1,6 @@
 using System.Reflection;
 using System.Text;
+using Domain;
 using Kirel.Repositories;
 using Kirel.Repositories.Infrastructure.Generics;
 using Kirel.Repositories.Interfaces;
@@ -31,7 +32,7 @@ builder.Services.AddScoped<MyAnimeListService>();
 builder.Services.AddScoped<SeriesService>();
 builder.Services.AddScoped<MovieService>();
 builder.Services.AddScoped<UserSeriesService>();
-
+builder.Services.AddScoped<CommentsService>();
 builder.Services.AddScoped<UserFavouriteService>();
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<IKirelGenericEntityFrameworkRepository<int, User>, KirelGenericEntityFrameworkRepository<int, User, DataDbContext>>();
@@ -43,6 +44,7 @@ builder.Services.AddScoped<IKirelGenericEntityFrameworkRepository<int, UserMovie
 builder.Services.AddScoped<IKirelGenericEntityFrameworkRepository<int, UserAnime>, KirelGenericEntityFrameworkRepository<int, UserAnime, DataDbContext>>();
 builder.Services.AddScoped<IKirelGenericEntityFrameworkRepository<int, Series>, KirelGenericEntityFrameworkRepository<int, Series, DataDbContext>>();
 builder.Services.AddScoped<IKirelGenericEntityFrameworkRepository<int, UserSeries>, KirelGenericEntityFrameworkRepository<int, UserSeries, DataDbContext>>();
+builder.Services.AddScoped<IKirelGenericEntityFrameworkRepository<int, MovieComment>, KirelGenericEntityFrameworkRepository<int, MovieComment, DataDbContext>>();
 
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
