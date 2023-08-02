@@ -6,6 +6,7 @@
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
+
 	<ItemGroup>
 	  <Folder Include="Models\" />
 	</ItemGroup>
@@ -15,5 +16,6 @@
 	  <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="8.0.0-preview.6.23329.11" />
 	  <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.30.0" />
 	</ItemGroup>
+
 
 </Project>
