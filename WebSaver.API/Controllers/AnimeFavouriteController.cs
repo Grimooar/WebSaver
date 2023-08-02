@@ -20,16 +20,14 @@ public class AnimeFavouriteController : ControllerBase
         _uAnimeService = uAnimeService;
     }
     
-    
-    [HttpPost("AddToFavorites")]
-
-    [HttpPost("AF")]
     /// <summary>
     /// Adds anime to the list of favorites for the specified user.
     /// </summary>
     /// <param name="userId">User ID.</param>
     /// <param name="animeId">Anime ID.</param>
     /// <returns>Returns a successful result of the operation.</returns>
+    [HttpPost("AddToFavorites")]
+
     public async Task<IActionResult> AddAnimeToFavorites([FromQuery] int userId, [FromQuery] int animeId)
     {
         await _uAnimeService.AddAnimeToUserFavorites(userId, animeId);
@@ -69,7 +67,7 @@ public class AnimeFavouriteController : ControllerBase
    }
    */
 
-    [HttpPost("RemoveMovieFromFavorites")]
+    [HttpPost("RemoveAnimeFromFavorites")]
 
     public async Task<IActionResult> RemoveMovieFromFavorites([FromQuery] int userId, [FromQuery] int animeId)
     {
