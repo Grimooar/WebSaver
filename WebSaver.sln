@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveRating", "SaveRating\SaveRating.csproj", "{4B12633E-3469-4F76-8102-1D08A1F9429E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{4B12633E-3469-4F76-8102-1D08A1F9429E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTOs", "DTOs\DTOs.csproj", "{3B757912-AC2E-4930-84F7-9F14C9F79EEC}"
 EndProject
