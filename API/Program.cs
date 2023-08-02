@@ -9,11 +9,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
-using WebApplication1.DbContext;
-using WebApplication1.Models;
-using WebApplication1.Service;
-using WebApplication1.UserContext;
-
 var builder = WebApplication.CreateBuilder(args);
 var configuration = new ConfigurationManager().AddJsonFile("appsettings.json").Build();
 var authOptions = configuration.GetSection("AuthOptions").Get<AuthOptions>();
@@ -117,6 +112,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your API V1");

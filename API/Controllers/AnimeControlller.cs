@@ -5,11 +5,14 @@ using Microsoft.AspNetCore.Authorization;
 using Swashbuckle.AspNetCore.Annotations;
 using WebApplication1.Models;
 
+
 namespace WebApplication1.Controllers
 {
     [ApiController]
     [Authorize]
-    [Route("api/Anime")]
+
+    [Route("api/[controller]")]
+ 
     public class AnimeController : ControllerBase
     {
         private readonly MyAnimeListService _animeService;
@@ -18,6 +21,7 @@ namespace WebApplication1.Controllers
         {
             _animeService = animeService;
         }
+
 
         /// <summary>
         /// Get list of anime by name 
@@ -28,6 +32,7 @@ namespace WebApplication1.Controllers
         [ProducesResponseType(typeof(List<Anime>), 200)]
         [ProducesResponseType(typeof(string), 400)]
         [SwaggerOperation(Summary = "Получение списка аниме по названию.")]
+
         public async Task<IActionResult> GetAnime(string animeName)
         {
             if (string.IsNullOrWhiteSpace(animeName))
@@ -38,4 +43,7 @@ namespace WebApplication1.Controllers
             return Ok(animeList);
         }
     }
+
+}
+
 }

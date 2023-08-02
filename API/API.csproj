@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <RootNamespace>WebApplication1</RootNamespace>
+
         <UserSecretsId>015e397a-7b1c-464f-aa99-1b5ac1ecc673</UserSecretsId>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
     </PropertyGroup>
@@ -57,12 +58,20 @@
         <PackageReference Include="SQLite" Version="3.13.0" />
         <PackageReference Include="SQLitePCLRaw.core" Version="2.1.4" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+
         <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
+
         <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
         <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.30.0" />
     </ItemGroup>
 
     <ItemGroup>
+
+      <ProjectReference Include="..\APP\APP.csproj" />
+      <ProjectReference Include="..\Domain\Domain.csproj" />
+      <ProjectReference Include="..\DTOs\DTOs.csproj" />
+      <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+
       <ProjectReference Include="..\DTOs\DTOs.csproj" />
     </ItemGroup>
 
@@ -71,6 +80,7 @@
       <_ContentIncludedByDefault Remove="DTOs\obj\DTOs.csproj.nuget.dgspec.json" />
       <_ContentIncludedByDefault Remove="DTOs\obj\project.assets.json" />
       <_ContentIncludedByDefault Remove="DTOs\obj\project.packagespec.json" />
+
     </ItemGroup>
 
 </Project>
