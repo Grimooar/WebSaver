@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<RootNamespace>Infrastructure</RootNamespace>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<ProjectReference Include="..\WebSaver.Domain\WebSaver.Domain.csproj" />
+		<ProjectReference Include="..\WebSaver.DTOs\WebSaver.DTOs.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="12.0.1" />
+	</ItemGroup>
+
+
+</Project>
