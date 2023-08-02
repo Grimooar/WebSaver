@@ -9,8 +9,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Domain\Domain.csproj" />
-	  <ProjectReference Include="..\DTOs\DTOs.csproj" />
+	  <ProjectReference Include="..\WebSaver.Domain\WebSaver.Domain.csproj" />
+	  <ProjectReference Include="..\WebSaver.DTOs\WebSaver.DTOs.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

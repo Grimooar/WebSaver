@@ -5,7 +5,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Kirel.Repositories.Interfaces;
 using WebApplication1.DTOs;
-using WebApplication1.Models; // Подключите namespace с DTOs, если необходимо
+using WebApplication1.Models; // Подключите namespace с WebSaver.DTOs, если необходимо
 
 namespace WebApplication1.Service
 {

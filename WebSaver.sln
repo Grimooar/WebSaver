@@ -1,16 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{4B12633E-3469-4F76-8102-1D08A1F9429E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSaver.API", "WebSaver.API\WebSaver.API.csproj", "{4B12633E-3469-4F76-8102-1D08A1F9429E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTOs", "DTOs\DTOs.csproj", "{3B757912-AC2E-4930-84F7-9F14C9F79EEC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSaver.DTOs", "WebSaver.DTOs\WebSaver.DTOs.csproj", "{3B757912-AC2E-4930-84F7-9F14C9F79EEC}"
 EndProject
 
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APP", "APP\APP.csproj", "{15348633-ED7C-498C-B98D-2BFE2D16D6A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSaver.APP", "WebSaver.APP\WebSaver.APP.csproj", "{15348633-ED7C-498C-B98D-2BFE2D16D6A6}"
 
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{ED37C142-8734-4400-B6D7-9B1E77140351}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSaver.Domain", "WebSaver.Domain\WebSaver.Domain.csproj", "{ED37C142-8734-4400-B6D7-9B1E77140351}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{33AB05C5-B961-493F-9F3E-9C638C1FCF72}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSaver.Infrastructure", "WebSaver.Infrastructure\WebSaver.Infrastructure.csproj", "{33AB05C5-B961-493F-9F3E-9C638C1FCF72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

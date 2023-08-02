@@ -67,10 +67,10 @@
 
     <ItemGroup>
 
-      <ProjectReference Include="..\APP\APP.csproj" />
-      <ProjectReference Include="..\Domain\Domain.csproj" />
-      <ProjectReference Include="..\DTOs\DTOs.csproj" />
-      <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+      <ProjectReference Include="..\WebSaver.APP\WebSaver.APP.csproj" />
+      <ProjectReference Include="..\WebSaver.Domain\WebSaver.Domain.csproj" />
+      <ProjectReference Include="..\WebSaver.DTOs\WebSaver.DTOs.csproj" />
+      <ProjectReference Include="..\WebSaver.Infrastructure\WebSaver.Infrastructure.csproj" />
 
       <ProjectReference Include="..\DTOs\DTOs.csproj" />
     </ItemGroup>
