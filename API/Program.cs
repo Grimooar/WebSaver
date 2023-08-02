@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using WebApplication1.DbContext;
+using WebApplication1.Models;
+using WebApplication1.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = new ConfigurationManager().AddJsonFile("appsettings.json").Build();
@@ -28,6 +31,7 @@ builder.Services.AddScoped<MyAnimeListService>();
 builder.Services.AddScoped<SeriesService>();
 builder.Services.AddScoped<MovieService>();
 builder.Services.AddScoped<UserSeriesService>();
+
 builder.Services.AddScoped<UserFavouriteService>();
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<IKirelGenericEntityFrameworkRepository<int, User>, KirelGenericEntityFrameworkRepository<int, User, DataDbContext>>();
