@@ -1,13 +1,14 @@
+using Domain;
+using DTOs;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
-using Kirel.Identity.Core.Models;
-
-using WebApplication1.DTOs;
-using WebApplication1.Models;
 using WebApplication1.Service;
 
-namespace WebApi.Controllers
+namespace WebApplication1.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
@@ -16,6 +17,11 @@ namespace WebApi.Controllers
      
         private readonly AuthService _authService;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="authOptions"></param>
+        /// <param name="authService"></param>
         public AuthController(IOptions<AuthOptions> authOptions, AuthService authService)
         {
             _authOptions = authOptions.Value;
@@ -23,6 +29,11 @@ namespace WebApi.Controllers
             _authService = authService;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="userDto"></param>
+        /// <returns></returns>
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserCreateDto userDto)
         {
@@ -40,6 +51,11 @@ namespace WebApi.Controllers
 
 
         
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="loginDto"></param>
+        /// <returns></returns>
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginDto loginDto)
         {

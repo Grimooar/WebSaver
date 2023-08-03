@@ -1,7 +1,7 @@
 using System.Reflection;
 using System.Text;
 using Domain;
-using Kirel.Repositories;
+using Infrastructure.DbContext;
 using Kirel.Repositories.Infrastructure.Generics;
 using Kirel.Repositories.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -9,8 +9,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using WebApplication1.DbContext;
-using WebApplication1.Models;
 using WebApplication1.Service;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,6 +1,6 @@
 using AutoMapper;
-using WebApplication1.DTOs;
-using WebApplication1.Models;
+using Domain;
+using DTOs;
 
 namespace WebApplication1.Mappings;
 

@@ -1,13 +1,16 @@
 using WebApplication1.Service;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using Domain;
 using Microsoft.AspNetCore.Authorization;
 using Swashbuckle.AspNetCore.Annotations;
-using WebApplication1.Models;
 
 
 namespace WebApplication1.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [ApiController]
     [Authorize]
 
@@ -17,6 +20,10 @@ namespace WebApplication1.Controllers
     {
         private readonly MyAnimeListService _animeService;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="animeService"></param>
         public AnimeController(MyAnimeListService animeService)
         {
             _animeService = animeService;

@@ -1,4 +1,4 @@
-namespace WebApplication1.DTOs;
+namespace DTOs;
 
 public class SeriesUpdateDto
 {

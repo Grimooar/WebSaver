@@ -4,6 +4,9 @@ using WebApplication1.Service;
 
 namespace WebApplication1.Controllers;
 
+/// <summary>
+/// 
+/// </summary>
 [ApiController]
 [Route("api/[controller]")]
 [Authorize]
@@ -11,11 +14,21 @@ public class UserMoviesController : ControllerBase
 {
     private readonly UserFavouriteService _userFavouriteService;
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="userFavouriteService"></param>
     public UserMoviesController(UserFavouriteService userFavouriteService)
     {
         this._userFavouriteService = userFavouriteService;
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="userId"></param>
+    /// <param name="movieId"></param>
+    /// <returns></returns>
     [HttpPost("AddToFavorites")]
     public async Task<IActionResult> AddMovieToFavorites([FromQuery] int userId, [FromQuery] int movieId)
     {
@@ -24,6 +37,12 @@ public class UserMoviesController : ControllerBase
     }
    
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="userId"></param>
+    /// <param name="movieId"></param>
+    /// <returns></returns>
     [HttpPost("AddToViewed")]
     public async Task<IActionResult> AddMovieToViewed([FromQuery] int userId, [FromQuery] int movieId)
     {
@@ -31,6 +50,13 @@ public class UserMoviesController : ControllerBase
         return Ok();
     }
    
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="userId"></param>
+    /// <param name="movieId"></param>
+    /// <param name="newRating"></param>
+    /// <returns></returns>
     [HttpPut("UpdateRating")]
     public async Task<IActionResult> UpdateMovieRating(int userId, int movieId, int newRating)
     {
@@ -51,6 +77,13 @@ public class UserMoviesController : ControllerBase
 
         return Ok();
     }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="userId"></param>
+    /// <param name="movieId"></param>
+    /// <param name="newStatus"></param>
+    /// <returns></returns>
     [HttpPut("UpdateStatus")]
     public async Task<IActionResult> UpdateMovieStatus([FromQuery] int userId, [FromQuery] int movieId, [FromQuery] int newStatus)
     {
@@ -73,6 +106,12 @@ public class UserMoviesController : ControllerBase
     }
    
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="userId"></param>
+    /// <param name="movieId"></param>
+    /// <returns></returns>
     [HttpPost("RemoveFromFavorites")]
     public async Task<IActionResult> RemoveMovieFromFavorites([FromQuery] int userId, [FromQuery] int movieId)
     {

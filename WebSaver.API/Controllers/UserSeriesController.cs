@@ -3,17 +3,30 @@ using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Service;
 
 namespace WebApplication1.Controllers;
+/// <summary>
+/// 
+/// </summary>
 [Authorize]
 public class UserSeriesController : ControllerBase
 {
      private readonly UserSeriesService _uSeriesService;
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="uSeriesService"></param>
     public UserSeriesController(UserSeriesService uSeriesService)
     {
         this._uSeriesService = uSeriesService;
     }
     
     
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="userId"></param>
+    /// <param name="animeId"></param>
+    /// <returns></returns>
     [HttpPost("AddSeriesToFavorites")]
     public async Task<IActionResult> AddSeriesToFavorites([FromQuery] int userId, [FromQuery] int animeId)
     {
@@ -21,6 +34,13 @@ public class UserSeriesController : ControllerBase
         return Ok();
     }
     
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="userId"></param>
+    /// <param name="seriesId"></param>
+    /// <param name="newRating"></param>
+    /// <returns></returns>
     [HttpPut("UpdateSeriesRating")]
     public async Task<IActionResult> UpdateSeriesRating([FromQuery] int userId, [FromQuery] int seriesId, [FromQuery] int newRating)
     {
@@ -49,6 +69,13 @@ public class UserSeriesController : ControllerBase
         await _uSeriesService.RemoveAnimeFromUserFavorites(userId, animeId);
         return Ok();
     }*/
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="userId"></param>
+    /// <param name="seriesId"></param>
+    /// <param name="newStatus"></param>
+    /// <returns></returns>
     [HttpPut("UpdateSeriesStatus")]
     public async Task<IActionResult> UpdateSeriesStatus([FromQuery] int userId, [FromQuery] int seriesId, [FromQuery] int newStatus)
     {

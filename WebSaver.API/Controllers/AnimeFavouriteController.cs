@@ -15,6 +15,10 @@ public class AnimeFavouriteController : ControllerBase
     
     private readonly UserFavouriteService _uAnimeService;
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="uAnimeService"></param>
     public AnimeFavouriteController(UserFavouriteService uAnimeService)
     {
         _uAnimeService = uAnimeService;
@@ -67,6 +71,12 @@ public class AnimeFavouriteController : ControllerBase
    }
    */
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="userId"></param>
+    /// <param name="animeId"></param>
+    /// <returns></returns>
     [HttpPost("RemoveAnimeFromFavorites")]
 
     public async Task<IActionResult> RemoveMovieFromFavorites([FromQuery] int userId, [FromQuery] int animeId)
@@ -75,6 +85,13 @@ public class AnimeFavouriteController : ControllerBase
         return Ok();
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="userId"></param>
+    /// <param name="animeId"></param>
+    /// <param name="newStatus"></param>
+    /// <returns></returns>
     [HttpPut(nameof(UpdateAnimeStatus))]
 
     public async Task<IActionResult> UpdateAnimeStatus([FromQuery] int userId, [FromQuery] int animeId, [FromQuery] int newStatus)

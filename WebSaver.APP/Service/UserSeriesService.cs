@@ -1,6 +1,6 @@
 using System.Linq.Expressions;
+using Domain;
 using Kirel.Repositories.Interfaces;
-using WebApplication1.Models;
 
 namespace WebApplication1.Service;
 

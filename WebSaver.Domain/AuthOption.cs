@@ -1,12 +1,9 @@
-namespace WebApplication1.Models;
-
-
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 
+namespace Domain;
 
-
-    public class AuthOptions
+public class AuthOptions
     {   
    
         public AuthOptions(string issuer, string audience, string key, int lifetime)

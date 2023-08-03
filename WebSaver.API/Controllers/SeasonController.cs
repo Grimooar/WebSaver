@@ -7,6 +7,9 @@ using Newtonsoft.Json;
 
 namespace WebApplication1.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class SeasonController : ControllerBase
@@ -14,12 +17,21 @@ namespace WebApplication1.Controllers
         private readonly HttpClient _httpClient;
         private readonly string _clientId; // Your MAL Client ID
 
+        /// <summary>
+        /// 
+        /// </summary>
         public SeasonController()
         {
             _httpClient = new HttpClient();
             _clientId = "16252d1ed6db9b604ea5ecc60ad7b7b8"; // Replace this with your actual MAL Client ID
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="length"></param>
+        /// <param name="seasonName"></param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> GetSeasonalAnimeAsync(int length = 4, string seasonName = "2017/summer")
         {

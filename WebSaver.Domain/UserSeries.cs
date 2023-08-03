@@ -1,6 +1,6 @@
 using Kirel.Repositories.Interfaces;
 
-namespace WebApplication1.Models;
+namespace Domain;
 
 public class UserSeries : ICreatedAtTrackedEntity, IKeyEntity<int>
 {

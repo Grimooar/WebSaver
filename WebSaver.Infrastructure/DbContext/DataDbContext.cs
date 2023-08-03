@@ -1,8 +1,7 @@
 using Domain;
 using Microsoft.EntityFrameworkCore;
-using WebApplication1.Models;
 
-namespace WebApplication1.DbContext;
+namespace Infrastructure.DbContext;
 
 public class DataDbContext :  Microsoft.EntityFrameworkCore.DbContext
 {

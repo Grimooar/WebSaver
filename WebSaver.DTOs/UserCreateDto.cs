@@ -1,6 +1,4 @@
-using System.ComponentModel.DataAnnotations;
-
-namespace WebApplication1.DTOs;
+namespace DTOs;
 
 public class UserCreateDto
 {

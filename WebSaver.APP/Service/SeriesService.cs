@@ -1,7 +1,7 @@
 using AutoMapper;
+using Domain;
+using DTOs;
 using Kirel.Repositories.Interfaces;
-using WebApplication1.DTOs;
-using WebApplication1.Models;
 
 namespace WebApplication1.Service
 {

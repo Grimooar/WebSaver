@@ -1,7 +1,7 @@
 using Kirel.Repositories.Interfaces;
 using Microsoft.AspNetCore.Identity;
 
-namespace WebApplication1.Models;
+namespace Domain;
 
 public class User : IdentityUser<int>, ICreatedAtTrackedEntity, IKeyEntity<int>
 {

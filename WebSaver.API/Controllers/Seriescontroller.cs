@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using WebApplication1.DTOs;
 using WebApplication1.Service;
 
 namespace WebApplication1.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [ApiController]
     [Authorize]
     [Route("api/[controller]")]
@@ -13,11 +15,20 @@ namespace WebApplication1.Controllers
     {
         private readonly SeriesService _seriesService;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="seriesService"></param>
         public SeriesController(SeriesService seriesService)
         {
             _seriesService = seriesService;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="movieTitle"></param>
+        /// <returns></returns>
         [HttpGet("{movieTitle}")]
         public async Task<IActionResult> GetSeriesInfo(string movieTitle)
         {
