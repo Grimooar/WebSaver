@@ -5,11 +5,8 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <RootNamespace>WebApplication1</RootNamespace>
-
         <UserSecretsId>015e397a-7b1c-464f-aa99-1b5ac1ecc673</UserSecretsId>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-        <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
     </PropertyGroup>
 
     <ItemGroup>
@@ -74,16 +71,6 @@
       <ProjectReference Include="..\WebSaver.Domain\WebSaver.Domain.csproj" />
       <ProjectReference Include="..\WebSaver.DTOs\WebSaver.DTOs.csproj" />
       <ProjectReference Include="..\WebSaver.Infrastructure\WebSaver.Infrastructure.csproj" />
-
-      <ProjectReference Include="..\DTOs\DTOs.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <_ContentIncludedByDefault Remove="DTOs\bin\Debug\net7.0\DTOs.deps.json" />
-      <_ContentIncludedByDefault Remove="DTOs\obj\DTOs.csproj.nuget.dgspec.json" />
-      <_ContentIncludedByDefault Remove="DTOs\obj\project.assets.json" />
-      <_ContentIncludedByDefault Remove="DTOs\obj\project.packagespec.json" />
-
     </ItemGroup>
 
 </Project>

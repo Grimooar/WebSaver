@@ -17,7 +17,6 @@ COPY ["WebSaver.Infrastructure/WebSaver.Infrastructure.csproj", "WebSaver.Infras
 RUN dotnet restore "WebSaver.API/WebSaver.API.csproj"
 COPY . .
 WORKDIR "/src/WebSaver.API"
-RUN dotnet build "WebSaver.API.csproj" -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish "WebSaver.API.csproj" -c Release -o /app/publish /p:UseAppHost=false

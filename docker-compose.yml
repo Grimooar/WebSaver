@@ -2,8 +2,37 @@ version: '3.4'
 
 services:
   backend:
-    image: ${DOCKER_REGISTRY-}websaverapi
-    build:
-      context: .
-      dockerfile: WebSaver.API/Dockerfile
-    
+    image: websaver:latest
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings:DefaultConnection=Server=database;Database=Rating;User Id=sa;Password=MyP@ssw0rd;
+    ports:
+      - "5000:80"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+    depends_on:
+      - database
+    networks:
+      my-project-network:
+       ipv4_address: 192.168.77.2
+
+  database:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - MSSQL_SA_PASSWORD=MyP@ssw0rd
+      - ACCEPT_EULA=Y
+   # ports:
+    #  - "1433:1433"
+    networks:
+      my-project-network:
+       ipv4_address: 192.168.77.12
+
+networks:
+  my-project-network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.77.0/24
+          gateway: 192.168.77.1
