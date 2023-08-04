@@ -5,28 +5,24 @@ services:
     image: websaver:latest
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings:SqlServerConnection=Server=database;Database=Rating;User Id=sa;Password=MyP@ssw0rd;
+      - ConnectionStrings:PostgreConnection:Host=database;Port=5432;Database=saver;Username=lsodis;Password=6742;
     ports:
       - "5000:80"
-#    volumes:
-#      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-#      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
     depends_on:
       - database
     networks:
       my-project-network:
-       ipv4_address: 192.168.77.2
+        ipv4_address: 192.168.77.2
 
   database:
-    image: mcr.microsoft.com/mssql/server:2019-latest
+    image: postgres:latest
     environment:
-      - MSSQL_SA_PASSWORD=MyP@ssw0rd
-      - ACCEPT_EULA=Y
-   # ports:
-    #  - "1433:1433"
+      - POSTGRES_DB=saver
+      - POSTGRES_USER=lsodis
+      - POSTGRES_PASSWORD=6742
     networks:
       my-project-network:
-       ipv4_address: 192.168.77.12
+        ipv4_address: 192.168.77.12
 
 networks:
   my-project-network:

@@ -15,7 +15,7 @@ using WebApplication1.Service;
 var builder = WebApplication.CreateBuilder(args);
 var configuration = new ConfigurationManager().AddJsonFile("appsettings.json").Build();
 var authOptions = configuration.GetSection("AuthOptions").Get<AuthOptions>();
-var connectionString = configuration.GetConnectionString("SqlServerConnection");
+var connectionString = configuration.GetConnectionString("PostgreConnection");
 // Add services to the container.
 /*builder.Services.AddDbContext<UserDbContext>(options =>
     options.UseSqlServer("Server=localhost;Database=Users;Trusted_Connection=True;Encrypt=False;"));*/
