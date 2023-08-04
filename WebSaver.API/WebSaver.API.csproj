@@ -8,6 +8,8 @@
 
         <UserSecretsId>015e397a-7b1c-464f-aa99-1b5ac1ecc673</UserSecretsId>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
     </PropertyGroup>
 
     <ItemGroup>
@@ -53,6 +55,7 @@
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+        <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.18.1" />
         <PackageReference Include="RestSharp" Version="110.2.1-alpha.0.10" />
         <PackageReference Include="SixLabors.ImageSharp" Version="3.0.0" />
         <PackageReference Include="SQLite" Version="3.13.0" />

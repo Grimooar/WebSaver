@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  backend:
+    image: ${DOCKER_REGISTRY-}websaverapi
+    build:
+      context: .
+      dockerfile: WebSaver.API/Dockerfile
+    
