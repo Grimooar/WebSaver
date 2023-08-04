@@ -7,6 +7,7 @@ using Kirel.Repositories.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Npgsql;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using WebApplication1.Service;
@@ -19,7 +20,7 @@ var connectionString = configuration.GetConnectionString("SqlServerConnection");
 /*builder.Services.AddDbContext<UserDbContext>(options =>
     options.UseSqlServer("Server=localhost;Database=Users;Trusted_Connection=True;Encrypt=False;"));*/
 builder.Services.AddDbContext<DataDbContext>(options =>
-    options.UseSqlServer(connectionString));
+    options.UseNpgsql(connectionString));
 /*builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());*/
 builder.Services.AddSingleton(authOptions);
 builder.Services.AddControllers();

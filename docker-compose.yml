@@ -5,12 +5,12 @@ services:
     image: websaver:latest
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings:DefaultConnection=Server=database;Database=Rating;User Id=sa;Password=MyP@ssw0rd;
+      - ConnectionStrings:SqlServerConnection=Server=database;Database=Rating;User Id=sa;Password=MyP@ssw0rd;
     ports:
       - "5000:80"
-    volumes:
-      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
-      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+#    volumes:
+#      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+#      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
     depends_on:
       - database
     networks:
