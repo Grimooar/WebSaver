@@ -13,9 +13,10 @@ using Microsoft.OpenApi.Models;
 using WebApplication1.Service;
 
 var builder = WebApplication.CreateBuilder(args);
-var configuration = new ConfigurationManager().AddJsonFile("appsettings.json").Build();
-var authOptions = configuration.GetSection("AuthOptions").Get<AuthOptions>();
-var connectionString = configuration.GetConnectionString("PostgreConnection");
+//var configuration = new ConfigurationManager().AddJsonFile("appsettings.json").Build();
+
+var authOptions = builder.Configuration.GetSection("AuthOptions").Get<AuthOptions>();
+var connectionString = builder.Configuration.GetConnectionString("PostgreConnection");
 // Add services to the container.
 /*builder.Services.AddDbContext<UserDbContext>(options =>
     options.UseSqlServer("Server=localhost;Database=Users;Trusted_Connection=True;Encrypt=False;"));*/
