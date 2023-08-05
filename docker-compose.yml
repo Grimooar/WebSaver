@@ -19,7 +19,7 @@ services:
     environment:
       - ACCEPT_EULA=Y
       - SA_PASSWORD=YourPassword123!
-      - MSSQL_PID=Express
+      - MSSQL_PID=Developer  # Используйте Developer или нужную вам лицензию
     ports:
       - "1433:1433"
     networks:
