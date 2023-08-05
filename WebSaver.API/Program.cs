@@ -16,12 +16,12 @@ var builder = WebApplication.CreateBuilder(args);
 //var configuration = new ConfigurationManager().AddJsonFile("appsettings.json").Build();
 
 var authOptions = builder.Configuration.GetSection("AuthOptions").Get<AuthOptions>();
-var connectionString = builder.Configuration.GetConnectionString("PostgreConnection");
+var connectionString = builder.Configuration.GetConnectionString("SqlConnection");
 // Add services to the container.
 /*builder.Services.AddDbContext<UserDbContext>(options =>
     options.UseSqlServer("Server=localhost;Database=Users;Trusted_Connection=True;Encrypt=False;"));*/
 builder.Services.AddDbContext<DataDbContext>(options =>
-    options.UseNpgsql(connectionString));
+    options.UseSqlServer(connectionString));
 /*builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());*/
 builder.Services.AddSingleton(authOptions);
 builder.Services.AddControllers();
