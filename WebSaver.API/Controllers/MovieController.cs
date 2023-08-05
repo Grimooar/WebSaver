@@ -16,22 +16,28 @@ using System.Threading.Tasks;
 [Authorize]
 public class MoviesController : ControllerBase
 {
-    private readonly MovieService movieService;
-
+    private readonly MovieService _movieService;
+    
+    
     /// <summary>
     /// 
     /// </summary>
     /// <param name="movieService"></param>
     public MoviesController(MovieService movieService)
     {
-        this.movieService = movieService;
+        _movieService = movieService;
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="movieTitle"></param>
+    /// <returns></returns>
     [HttpGet("{movieTitle}")]
     public async Task<IActionResult> GetMovieInfo(string movieTitle)
     {
         // Вызов сервиса, чтобы получить информацию о фильме или аниме по названию
-        List<MovieDto> movieInfo = await movieService.GetMovieInfo(movieTitle);
+        List<MovieDto> movieInfo = await _movieService.GetMovieInfo(movieTitle);
 
         if (movieInfo == null)
         {
